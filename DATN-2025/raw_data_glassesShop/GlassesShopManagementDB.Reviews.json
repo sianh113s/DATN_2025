@@ -1,0 +1,142 @@
+[
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000101"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d001"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010001"
+    },
+    "rating": 5,
+    "comment": "Kính rất đẹp, đeo nhẹ và thoải mái.",
+    "created_at": "2025-08-02T10:15:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000102"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d004"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010002"
+    },
+    "rating": 4,
+    "comment": "Đeo vừa mặt, giao hàng nhanh.",
+    "created_at": "2025-08-03T14:30:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000103"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d007"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010003"
+    },
+    "rating": 5,
+    "comment": "Màu xám trung tính, hợp với phong cách công sở.",
+    "created_at": "2025-08-05T09:45:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000104"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d005"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010004"
+    },
+    "rating": 3,
+    "comment": "Kính đẹp nhưng hộp hơi móp khi nhận.",
+    "created_at": "2025-08-06T17:20:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000105"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d009"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010006"
+    },
+    "rating": 5,
+    "comment": "Dây giữ kính rất tiện lợi khi đi du lịch.",
+    "created_at": "2025-08-07T08:05:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000106"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d002"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010007"
+    },
+    "rating": 4,
+    "comment": "Tròng gương nhìn chất lượng, đeo ra nắng mát mắt.",
+    "created_at": "2025-08-08T13:55:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000107"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d008"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010009"
+    },
+    "rating": 5,
+    "comment": "Màu vàng nổi bật, đi biển rất hợp.",
+    "created_at": "2025-08-09T11:40:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000108"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d00A"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010010"
+    },
+    "rating": 4,
+    "comment": "Kiểu dáng vuông hợp với mặt tròn, chất liệu chắc chắn.",
+    "created_at": "2025-08-10T16:25:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa30010000000000000109"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d006"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010013"
+    },
+    "rating": 5,
+    "comment": "Bộ vệ sinh kính chất lượng, dễ sử dụng.",
+    "created_at": "2025-08-11T07:50:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa3001000000000000010A"
+    },
+    "product_id": {
+      "$oid": "64f9b154a1a1a1a1a1a1d003"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010016"
+    },
+    "rating": 4,
+    "comment": "Dây đeo kính kim loại sang trọng, bền.",
+    "created_at": "2025-08-12T15:10:00Z"
+  }
+]

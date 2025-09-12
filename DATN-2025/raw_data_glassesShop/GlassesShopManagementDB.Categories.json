@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "name": "eyeglasses"
+},
+{
+  "_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "name": "sunglasses"
+},
+{
+  "_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "name": "accessories"
+}]

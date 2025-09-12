@@ -1,0 +1,493 @@
+[{
+  "_id": {
+    "$oid": "66bde0010000000000010001"
+  },
+  "name": "Nguyễn Văn A",
+  "email": "nguyenvana@gmail.com",
+  "password": "$2b$10$abc123hashedpassword1",
+  "phone": "0901234567",
+  "address": "123 Lê Lợi, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010002"
+  },
+  "name": "Trần Thị B",
+  "email": "tranthib@gmail.com",
+  "password": "$2b$10$abc123hashedpassword2",
+  "phone": "0912345678",
+  "address": "45 Nguyễn Huệ, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010003"
+  },
+  "name": "Lê Văn C",
+  "email": "levanc@gmail.com",
+  "password": "$2b$10$abc123hashedpassword3",
+  "phone": "0923456789",
+  "address": "78 Hai Bà Trưng, Q.3, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010004"
+  },
+  "name": "Phạm Thị D",
+  "email": "phamthid@gmail.com",
+  "password": "$2b$10$abc123hashedpassword4",
+  "phone": "0934567890",
+  "address": "12 Lý Thường Kiệt, Q.10, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010005"
+  },
+  "name": "Hoàng Văn E",
+  "email": "hoangvane@gmail.com",
+  "password": "$2b$10$abc123hashedpassword5",
+  "phone": "0945678901",
+  "address": "90 Võ Văn Tần, Q.3, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010006"
+  },
+  "name": "Nguyễn Thị F",
+  "email": "nguyenthif@gmail.com",
+  "password": "$2b$10$abc123hashedpassword6",
+  "phone": "0956789012",
+  "address": "56 Nguyễn Trãi, Q.5, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010007"
+  },
+  "name": "Võ Văn G",
+  "email": "vovang@gmail.com",
+  "password": "$2b$10$abc123hashedpassword7",
+  "phone": "0967890123",
+  "address": "34 Pasteur, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010008"
+  },
+  "name": "Phan Thị H",
+  "email": "phanthih@gmail.com",
+  "password": "$2b$10$abc123hashedpassword8",
+  "phone": "0978901234",
+  "address": "101 Lê Lai, Q.1, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010009"
+  },
+  "name": "Đỗ Văn I",
+  "email": "dovani@gmail.com",
+  "password": "$2b$10$abc123hashedpassword9",
+  "phone": "0989012345",
+  "address": "200 Trần Hưng Đạo, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010010"
+  },
+  "name": "Lý Thị K",
+  "email": "lythik@gmail.com",
+  "password": "$2b$10$abc123hashedpassword10",
+  "phone": "0990123456",
+  "address": "300 Điện Biên Phủ, Q.3, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010011"
+  },
+  "name": "Nguyễn Văn L",
+  "email": "nguyenvanl@gmail.com",
+  "password": "$2b$10$abc123hashedpassword11",
+  "phone": "0901111222",
+  "address": "15 Nguyễn Đình Chiểu, Q.3, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010012"
+  },
+  "name": "Trần Thị M",
+  "email": "tranthim@gmail.com",
+  "password": "$2b$10$abc123hashedpassword12",
+  "phone": "0911111333",
+  "address": "27 Lý Tự Trọng, Q.1, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010013"
+  },
+  "name": "Lê Văn N",
+  "email": "levann@gmail.com",
+  "password": "$2b$10$abc123hashedpassword13",
+  "phone": "0921111444",
+  "address": "88 Nguyễn Văn Cừ, Q.5, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010014"
+  },
+  "name": "Phạm Thị O",
+  "email": "phamthio@gmail.com",
+  "password": "$2b$10$abc123hashedpassword14",
+  "phone": "0931111555",
+  "address": "42 Trường Chinh, Tân Bình, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010015"
+  },
+  "name": "Hoàng Văn P",
+  "email": "hoangvanp@gmail.com",
+  "password": "$2b$10$abc123hashedpassword15",
+  "phone": "0941111666",
+  "address": "77 Hoàng Sa, Q.3, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010016"
+  },
+  "name": "Nguyễn Thị Q",
+  "email": "nguyenthq@gmail.com",
+  "password": "$2b$10$abc123hashedpassword16",
+  "phone": "0951111777",
+  "address": "22 Điện Biên Phủ, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010017"
+  },
+  "name": "Võ Văn R",
+  "email": "vovanr@gmail.com",
+  "password": "$2b$10$abc123hashedpassword17",
+  "phone": "0961111888",
+  "address": "39 Bạch Đằng, Bình Thạnh, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010018"
+  },
+  "name": "Phan Thị S",
+  "email": "phanthis@gmail.com",
+  "password": "$2b$10$abc123hashedpassword18",
+  "phone": "0971111999",
+  "address": "120 Hồng Bàng, Q.5, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010019"
+  },
+  "name": "Đỗ Văn T",
+  "email": "dovant@gmail.com",
+  "password": "$2b$10$abc123hashedpassword19",
+  "phone": "0981111223",
+  "address": "55 Cách Mạng Tháng 8, Q.10, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010020"
+  },
+  "name": "Lý Thị U",
+  "email": "lythiu@gmail.com",
+  "password": "$2b$10$abc123hashedpassword20",
+  "phone": "0991111445",
+  "address": "88 Nguyễn Thị Minh Khai, Q.1, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010021"
+  },
+  "name": "Nguyễn Văn V",
+  "email": "nguyenvanv@gmail.com",
+  "password": "$2b$10$abc123hashedpassword21",
+  "phone": "0902222555",
+  "address": "12 Lê Duẩn, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010022"
+  },
+  "name": "Trần Thị W",
+  "email": "tranthiw@gmail.com",
+  "password": "$2b$10$abc123hashedpassword22",
+  "phone": "0912222666",
+  "address": "100 Lý Thái Tổ, Q.10, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010023"
+  },
+  "name": "Lê Văn X",
+  "email": "levanx@gmail.com",
+  "password": "$2b$10$abc123hashedpassword23",
+  "phone": "0922222777",
+  "address": "200 Võ Thị Sáu, Q.3, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010024"
+  },
+  "name": "Phạm Thị Y",
+  "email": "phamthiy@gmail.com",
+  "password": "$2b$10$abc123hashedpassword24",
+  "phone": "0932222888",
+  "address": "45 Trần Quang Khải, Q.1, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010025"
+  },
+  "name": "Hoàng Văn Z",
+  "email": "hoangvanz@gmail.com",
+  "password": "$2b$10$abc123hashedpassword25",
+  "phone": "0942222999",
+  "address": "67 Nguyễn Đình Chiểu, Q.3, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010026"
+  },
+  "name": "Nguyễn Thị AA",
+  "email": "nguyenthaa@gmail.com",
+  "password": "$2b$10$abc123hashedpassword26",
+  "phone": "0952222111",
+  "address": "89 Nam Kỳ Khởi Nghĩa, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010027"
+  },
+  "name": "Võ Văn AB",
+  "email": "vovanab@gmail.com",
+  "password": "$2b$10$abc123hashedpassword27",
+  "phone": "0962222222",
+  "address": "23 Nguyễn Thị Nghĩa, Q.1, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010028"
+  },
+  "name": "Phan Thị AC",
+  "email": "phanthiac@gmail.com",
+  "password": "$2b$10$abc123hashedpassword28",
+  "phone": "0972222333",
+  "address": "145 Nguyễn Văn Thủ, Q.1, TP.HCM",
+  "role": "admin",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bde0010000000000010029"
+  },
+  "name": "Đỗ Văn AD",
+  "email": "dovanad@gmail.com",
+  "password": "$2b$10$abc123hashedpassword29",
+  "phone": "0982222444",
+  "address": "300 Nguyễn Thị Minh Khai, Q.3, TP.HCM",
+  "role": "customer",
+  "created_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T03:05:00.000Z"
+  }
+}]

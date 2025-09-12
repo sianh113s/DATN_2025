@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Xác nhận đơn hàng kính mắt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 22px;
+    }
+    .order-info {
+      margin: 20px 0;
+    }
+    .order-info p {
+      margin: 6px 0;
+    }
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    .product-table th, .product-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .product-table th {
+      background: #f0f0f0;
+    }
+    .total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cảm ơn bạn đã đặt hàng!</h1>
+    <p>Đơn hàng của bạn đã được xác nhận. Thông tin chi tiết như sau:</p>
+    
+    <div class="order-info">
+      <p><strong>Mã đơn hàng:</strong> <%= order._id%></p>
+      <p><strong>Ngày đặt:</strong> <%= order.createdAt%></p>
+      <p><strong>Địa chỉ giao hàng:</strong> <%= order.shipping_address%></p>
+      <p><strong>Phương thức thanh toán:</strong> <%= order.payment_method%></p>
+      <p><strong>Trạng thái thanh toán:</strong> <%= order.payment_status%></p>
+    </div>
+
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Số lượng</th>
+          <th>Giá</th>
+          <th>Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(function(product) { %>
+          <tr>
+            <td><%= product.name %></td>
+            <td><%= product.qty %></td>
+            <td><%= product.price.toLocaleString() %>₫</td>
+            <td><%= product.total.toLocaleString() %>₫</td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <p class="total">Tổng cộng: <%= order.total_amount.toLocaleString()%>₫</p>
+    <p class="total">Giảm giá: <%= order.discount_value.toLocaleString()%>₫</p>
+    <p class="total">Thành tiền: <%= order.final_amount.toLocaleString()%>₫</p>
+
+    <p>Chúng tôi sẽ liên hệ khi đơn hàng của bạn được giao cho đơn vị vận chuyển.</p>
+
+    <div class="footer">
+      <p>© 2025 Sungla Glasses Shop. Mọi quyền được bảo lưu.</p>
+    </div>
+  </div>
+</body>
+</html>

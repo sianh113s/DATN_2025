@@ -1,0 +1,222 @@
+[{
+  "_id": {
+    "$oid": "66be10010000000000010001"
+  },
+  "user_id": {
+    "$oid": "66bde0010000000000010001"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a001"
+      },
+      "name": "Kính râm Ray-Ban Aviator",
+      "price": 2500000,
+      "quantity": 1,
+      "color": "Đen",
+      "size": "M",
+      "image": "https://example.com/images/rayban-aviator-den.jpg",
+      "subtotal": 2500000
+    },
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a002"
+      },
+      "name": "Kính cận gọng tròn Gentle Monster",
+      "price": 3200000,
+      "quantity": 1,
+      "color": "Bạc",
+      "size": "L",
+      "image": "https://example.com/images/gentle-monster-bac.jpg",
+      "subtotal": 3200000
+    }
+  ],
+  "total_quantity": 2,
+  "total_price": 5700000,
+  "status": "active",
+  "created_at": {
+    "$date": "2025-08-11T04:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-11T04:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66be10010000000000010002"
+  },
+  "user_id": {
+    "$oid": "66bde0010000000000010002"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a003"
+      },
+      "name": "Kính râm Dior So Real",
+      "price": 4200000,
+      "quantity": 1,
+      "color": "Vàng",
+      "size": "M",
+      "image": "https://example.com/images/dior-so-real-vang.jpg",
+      "subtotal": 4200000
+    }
+  ],
+  "total_quantity": 1,
+  "total_price": 4200000,
+  "status": "ordered",
+  "created_at": {
+    "$date": "2025-08-10T02:30:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-10T02:30:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66be10010000000000010003"
+  },
+  "user_id": {
+    "$oid": "66bde0010000000000010003"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a004"
+      },
+      "name": "Kính cận gọng vuông Oakley",
+      "price": 2800000,
+      "quantity": 2,
+      "color": "Đen",
+      "size": "L",
+      "image": "https://example.com/images/oakley-vuong-den.jpg",
+      "subtotal": 5600000
+    }
+  ],
+  "total_quantity": 2,
+  "total_price": 5600000,
+  "status": "active",
+  "created_at": {
+    "$date": "2025-08-09T10:15:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-09T10:15:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66be10010000000000010004"
+  },
+  "user_id": {
+    "$oid": "66bde0010000000000010004"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a005"
+      },
+      "name": "Kính râm Gucci GG0061S",
+      "price": 5100000,
+      "quantity": 1,
+      "color": "Hồng",
+      "size": "M",
+      "image": "https://example.com/images/gucci-hong.jpg",
+      "subtotal": 5100000
+    },
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a006"
+      },
+      "name": "Kính cận gọng titan Prada",
+      "price": 4500000,
+      "quantity": 1,
+      "color": "Bạc",
+      "size": "L",
+      "image": "https://example.com/images/prada-titan-bac.jpg",
+      "subtotal": 4500000
+    }
+  ],
+  "total_quantity": 2,
+  "total_price": 9600000,
+  "status": "ordered",
+  "created_at": {
+    "$date": "2025-08-08T08:45:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-08T08:45:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66be10010000000000010005"
+  },
+  "user_id": {
+    "$oid": "66bde0010000000000010005"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a007"
+      },
+      "name": "Kính râm Cartier Santos",
+      "price": 7200000,
+      "quantity": 1,
+      "color": "Nâu",
+      "size": "L",
+      "image": "https://example.com/images/cartier-santos-nau.jpg",
+      "subtotal": 7200000
+    }
+  ],
+  "total_quantity": 1,
+  "total_price": 7200000,
+  "status": "canceled",
+  "created_at": {
+    "$date": "2025-08-07T14:20:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-07T14:20:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66be10010000000000010006"
+  },
+  "user_id": {
+    "$oid": "66bde0010000000000010006"
+  },
+  "items": [
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a002"
+      },
+      "name": "Kính cận gọng tròn Gentle Monster",
+      "price": 3200000,
+      "quantity": 1,
+      "color": "Vàng",
+      "size": "M",
+      "image": "https://example.com/images/gentle-monster-vang.jpg",
+      "subtotal": 3200000
+    },
+    {
+      "product_id": {
+        "$oid": "64f9a9d1a1a1a1a1a1a1a005"
+      },
+      "name": "Kính râm Gucci GG0061S",
+      "price": 5100000,
+      "quantity": 1,
+      "color": "Đen",
+      "size": "L",
+      "image": "https://example.com/images/gucci-den.jpg",
+      "subtotal": 5100000
+    }
+  ],
+  "total_quantity": 2,
+  "total_price": 8300000,
+  "status": "active",
+  "created_at": {
+    "$date": "2025-08-06T12:10:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-06T12:10:00.000Z"
+  }
+}]

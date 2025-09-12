@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+  },
+  "name": "Đen",
+  "hex_code": "#000000"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+  },
+  "name": "Trắng",
+  "hex_code": "#FFFFFF"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+  },
+  "name": "Xám",
+  "hex_code": "#808080"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f004"
+  },
+  "name": "Nâu",
+  "hex_code": "#8B4513"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f005"
+  },
+  "name": "Xanh dương",
+  "hex_code": "#0000FF"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+  },
+  "name": "Đỏ",
+  "hex_code": "#FF0000"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f007"
+  },
+  "name": "Vàng",
+  "hex_code": "#FFFF00"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f008"
+  },
+  "name": "Xanh lá",
+  "hex_code": "#00FF00"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f009"
+  },
+  "name": "Hồng",
+  "hex_code": "#FFC0CB"
+},
+{
+  "_id": {
+    "$oid": "64d8c4f2a5d2a5bdf0a1f00a"
+  },
+  "name": "Tím",
+  "hex_code": "#800080"
+}]

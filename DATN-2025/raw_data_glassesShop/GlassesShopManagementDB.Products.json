@@ -1,0 +1,1082 @@
+[{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a001"
+  },
+  "type": "sunglasses",
+  "name": "Aviator Classic Black",
+  "material": "Kim loại",
+  "description": "Kính mát kiểu phi công cổ điển, phù hợp cho cả nam và nữ.",
+  "price_vnd": 1200000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 25,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/aviator-black.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "aviator-classic-black",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a002"
+  },
+  "type": "sunglasses",
+  "name": "Round Retro Brown",
+  "material": "Nhựa acetate",
+  "description": "Kính mát dáng tròn phong cách retro với gọng nâu sẫm.",
+  "price_vnd": 980000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f004"
+    }
+  ],
+  "stock_quantity": 10,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/round-retro-brown.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "round-retro-brown",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a003"
+  },
+  "type": "sunglasses",
+  "name": "Wayfarer Blue Tint",
+  "material": "Polycarbonate",
+  "description": "Thiết kế cổ điển với tròng kính xanh dương trẻ trung.",
+  "price_vnd": 850000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f005"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 30,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/wayfarer-blue.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "wayfarer-blue-tint",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a004"
+  },
+  "type": "sunglasses",
+  "name": "Sporty X Vision",
+  "material": "Nhựa TR90",
+  "description": "Kính thể thao chống tia UV400, phù hợp cho vận động ngoài trời.",
+  "price_vnd": 1350000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f007"
+    }
+  ],
+  "stock_quantity": 40,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/sporty-x-vision.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "sporty-x-vision",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a005"
+  },
+  "type": "sunglasses",
+  "name": "Urban Square White",
+  "material": "Kim loại & nhựa",
+  "description": "Thiết kế vuông hiện đại, phù hợp cho trang phục công sở.",
+  "price_vnd": 1100000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    }
+  ],
+  "stock_quantity": 12,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/urban-square-white.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "urban-square-white",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a006"
+  },
+  "type": "sunglasses",
+  "name": "Luxury Pink Cat Eye",
+  "material": "Acetate cao cấp",
+  "description": "Kính mắt mèo hồng thời trang, dành riêng cho phái đẹp.",
+  "price_vnd": 1650000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f009"
+    }
+  ],
+  "stock_quantity": 20,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/luxury-cat-eye-pink.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "luxury-pink-cat-eye",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a007"
+  },
+  "type": "sunglasses",
+  "name": "Green Mirror Shield",
+  "material": "Polycarbonate",
+  "description": "Kính gương toàn phần với lớp phủ chống lóa ánh sáng mạnh.",
+  "price_vnd": 1250000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f008"
+    }
+  ],
+  "stock_quantity": 18,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/green-mirror-shield.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "green-mirror-shield",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a008"
+  },
+  "type": "sunglasses",
+  "name": "Minimalist Gray Square",
+  "material": "Titanium",
+  "description": "Phong cách tối giản với gọng màu xám trung tính.",
+  "price_vnd": 1450000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+    }
+  ],
+  "stock_quantity": 15,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/minimalist-gray.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "minimalist-gray-square",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a009"
+  },
+  "type": "sunglasses",
+  "name": "Purple Crystal Fashion",
+  "material": "Nhựa trong suốt",
+  "description": "Thiết kế độc đáo với gọng tím trong suốt, nổi bật mọi lúc mọi nơi.",
+  "price_vnd": 1580000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f00a"
+    }
+  ],
+  "stock_quantity": 8,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/purple-crystal.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "purple-crystal-fashion",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9a9d1a1a1a1a1a1a1a00a"
+  },
+  "type": "sunglasses",
+  "name": "Triple Color Vision",
+  "material": "Nhựa TR90",
+  "description": "Mẫu kính phối 3 màu độc đáo dành cho người cá tính.",
+  "price_vnd": 1380000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f005"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    }
+  ],
+  "stock_quantity": 22,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/triple-color.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "triple-color-vision",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b001"
+  },
+  "type": "eyeglasses",
+  "name": "Classic Oval Frame",
+  "material": "Titanium",
+  "description": "Gọng kính hình oval cổ điển, siêu nhẹ và bền.",
+  "price_vnd": 1650000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 30,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/classic-oval.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "classic-oval-frame",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b002"
+  },
+  "type": "eyeglasses",
+  "name": "Minimalist Silver Edge",
+  "material": "Kim loại không gỉ",
+  "description": "Thiết kế mỏng nhẹ, phù hợp phong cách tối giản.",
+  "price_vnd": 1420000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    }
+  ],
+  "stock_quantity": 18,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/minimalist-silver.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "minimalist-silver-edge",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b003"
+  },
+  "type": "eyeglasses",
+  "name": "Bold Square Black",
+  "material": "Acetate",
+  "description": "Gọng kính vuông bản to, cá tính mạnh mẽ.",
+  "price_vnd": 1300000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 20,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/bold-square-black.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "bold-square-black",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b004"
+  },
+  "type": "eyeglasses",
+  "name": "Vintage Round Brown",
+  "material": "Gỗ ép tự nhiên",
+  "description": "Phong cách cổ điển với chất liệu gỗ độc đáo.",
+  "price_vnd": 1800000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f004"
+    }
+  ],
+  "stock_quantity": 15,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/vintage-round-brown.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "vintage-round-brown",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b005"
+  },
+  "type": "eyeglasses",
+  "name": "Trendy Transparent Pink",
+  "material": "Nhựa trong suốt",
+  "description": "Gọng hồng trong trẻ trung, phù hợp giới trẻ.",
+  "price_vnd": 1250000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f009"
+    }
+  ],
+  "stock_quantity": 22,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/trendy-transparent-pink.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "trendy-transparent-pink",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b006"
+  },
+  "type": "eyeglasses",
+  "name": "Office Blue Edge",
+  "material": "Nhựa cao cấp",
+  "description": "Kính gọng xanh dương nhẹ nhàng, phù hợp môi trường làm việc.",
+  "price_vnd": 1180000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f005"
+    }
+  ],
+  "stock_quantity": 16,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/office-blue-edge.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "office-blue-edge",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b007"
+  },
+  "type": "eyeglasses",
+  "name": "Eco Green Style",
+  "material": "Nhựa sinh học",
+  "description": "Sản phẩm thân thiện môi trường với màu xanh lá nổi bật.",
+  "price_vnd": 1500000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f008"
+    }
+  ],
+  "stock_quantity": 12,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/eco-green-style.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "eco-green-style",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b008"
+  },
+  "type": "eyeglasses",
+  "name": "Smart Clear Vision",
+  "material": "Hợp kim",
+  "description": "Gọng kính thông minh nhẹ và trong suốt.",
+  "price_vnd": 1380000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    }
+  ],
+  "stock_quantity": 25,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/smart-clear-vision.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "smart-clear-vision",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b009"
+  },
+  "type": "eyeglasses",
+  "name": "Chic Purple Cat Eye",
+  "material": "Acetate",
+  "description": "Mắt kính kiểu mèo màu tím cá tính, phù hợp nữ giới.",
+  "price_vnd": 1550000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f00a"
+    }
+  ],
+  "stock_quantity": 10,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/chic-purple-cat-eye.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "chic-purple-cat-eye",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ac12a1a1a1a1a1a1b00a"
+  },
+  "type": "eyeglasses",
+  "name": "Fusion Red & Gray",
+  "material": "Carbon fiber",
+  "description": "Thiết kế kết hợp 2 màu đỏ và xám, hiện đại và mạnh mẽ.",
+  "price_vnd": 1720000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+    }
+  ],
+  "stock_quantity": 14,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/fusion-red-gray.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "fusion-red-gray",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c001"
+  },
+  "type": "accessories",
+  "name": "Leather Glasses Case",
+  "material": "Da PU",
+  "description": "Hộp đựng kính da sang trọng, bảo vệ kính tối ưu.",
+  "price_vnd": 350000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f004"
+    }
+  ],
+  "stock_quantity": 50,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/leather-case.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "leather-glasses-case",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c002"
+  },
+  "type": "accessories",
+  "name": "Anti-Fog Lens Cloth",
+  "material": "Sợi siêu mịn",
+  "description": "Khăn lau chống mờ cho tròng kính, sử dụng được 200 lần.",
+  "price_vnd": 220000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    }
+  ],
+  "stock_quantity": 100,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/anti-fog-cloth.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "anti-fog-lens-cloth",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c003"
+  },
+  "type": "accessories",
+  "name": "Magnetic Eyewear Clip",
+  "material": "Nam châm & hợp kim",
+  "description": "Kẹp kính nam châm tiện dụng, gắn lên áo hoặc túi.",
+  "price_vnd": 290000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+    }
+  ],
+  "stock_quantity": 40,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/magnetic-clip.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "magnetic-eyewear-clip",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c004"
+  },
+  "type": "accessories",
+  "name": "Stylish Glasses Chain",
+  "material": "Thép không gỉ",
+  "description": "Dây đeo kính thời trang, chống rơi mất kính.",
+  "price_vnd": 320000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f00a"
+    }
+  ],
+  "stock_quantity": 35,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/glasses-chain-purple.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "stylish-glasses-chain",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c005"
+  },
+  "type": "accessories",
+  "name": "Compact Lens Spray Kit",
+  "material": "Nhựa & dung dịch nano",
+  "description": "Bộ xịt vệ sinh tròng kính nhỏ gọn mang theo tiện lợi.",
+  "price_vnd": 280000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f005"
+    }
+  ],
+  "stock_quantity": 70,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/spray-kit.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "compact-lens-spray-kit",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c006"
+  },
+  "type": "accessories",
+  "name": "Eyeglass Nose Pads",
+  "material": "Silicone mềm",
+  "description": "Miếng đệm mũi thay thế, chống trượt và êm ái.",
+  "price_vnd": 200000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    }
+  ],
+  "stock_quantity": 120,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/nose-pads.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "eyeglass-nose-pads",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c007"
+  },
+  "type": "accessories",
+  "name": "Designer Lens Case",
+  "material": "Nhựa cứng & họa tiết hoa văn",
+  "description": "Hộp đựng tròng kính thiết kế hoa độc đáo.",
+  "price_vnd": 410000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f009"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f00a"
+    }
+  ],
+  "stock_quantity": 20,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/designer-case.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "designer-lens-case",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c008"
+  },
+  "type": "accessories",
+  "name": "Sports Retainer Strap",
+  "material": "Dây thun co giãn",
+  "description": "Dây đeo giữ kính chắc chắn khi chơi thể thao.",
+  "price_vnd": 260000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f007"
+    }
+  ],
+  "stock_quantity": 60,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/sport-strap.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "sports-retainer-strap",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c009"
+  },
+  "type": "accessories",
+  "name": "Luxury Cleaning Cloth Set",
+  "material": "Microfiber cao cấp",
+  "description": "Bộ 5 khăn lau tròng kính cao cấp, siêu mềm và thấm hút.",
+  "price_vnd": 520000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f008"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 45,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/luxury-cloth.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "luxury-cleaning-cloth-set",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9ae34a1a1a1a1a1a1c00a"
+  },
+  "type": "accessories",
+  "name": "Mini Screwdriver Keychain",
+  "material": "Thép không gỉ",
+  "description": "Móc khóa tua vít mini, tiện lợi sửa gọng kính mọi lúc.",
+  "price_vnd": 240000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 90,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/screwdriver-keychain.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "mini-screwdriver-keychain",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d001"
+  },
+  "type": "eyeglasses",
+  "name": "Elegant Rose Frame",
+  "material": "Acetate",
+  "description": "Gọng kính màu hồng pastel nhẹ nhàng, tôn lên vẻ nữ tính.",
+  "price_vnd": 1490000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f009"
+    }
+  ],
+  "stock_quantity": 22,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/elegant-rose.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "elegant-rose-frame",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d002"
+  },
+  "type": "sunglasses",
+  "name": "Urban Explorer Mirror",
+  "material": "Polycarbonate",
+  "description": "Kính mát tròng gương dành cho người năng động.",
+  "price_vnd": 1390000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f007"
+    }
+  ],
+  "stock_quantity": 15,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/urban-explorer.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "urban-explorer-mirror",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d003"
+  },
+  "type": "accessories",
+  "name": "Metal Eyeglass Chain",
+  "material": "Kim loại mạ bạc",
+  "description": "Dây đeo kính kim loại thanh lịch, phù hợp với phong cách công sở.",
+  "price_vnd": 390000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+    }
+  ],
+  "stock_quantity": 40,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/metal-chain.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "metal-eyeglass-chain",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d004"
+  },
+  "type": "eyeglasses",
+  "name": "Smart Vision Black",
+  "material": "Hợp kim",
+  "description": "Gọng đen truyền thống, phù hợp mọi gương mặt.",
+  "price_vnd": 1150000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 18,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/smart-black.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "smart-vision-black",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d005"
+  },
+  "type": "sunglasses",
+  "name": "Festival Round Blue",
+  "material": "Nhựa cao cấp",
+  "description": "Kính mát dáng tròn, sắc xanh trẻ trung nổi bật.",
+  "price_vnd": 1250000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f005"
+    }
+  ],
+  "stock_quantity": 25,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/festival-round-blue.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "festival-round-blue",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d006"
+  },
+  "type": "accessories",
+  "name": "Cleaning Spray & Cloth Set",
+  "material": "Dung dịch nano + khăn microfiber",
+  "description": "Bộ vệ sinh kính tiện lợi, làm sạch nhanh chóng.",
+  "price_vnd": 300000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f002"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f001"
+    }
+  ],
+  "stock_quantity": 70,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/spray-cloth.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "cleaning-spray-cloth-set",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d007"
+  },
+  "type": "eyeglasses",
+  "name": "Hybrid Style Gray",
+  "material": "Titanium & nhựa",
+  "description": "Gọng kết hợp chất liệu, nhẹ mà bền, màu xám trung tính.",
+  "price_vnd": 1390000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f003"
+    }
+  ],
+  "stock_quantity": 12,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/hybrid-gray.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "hybrid-style-gray",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d008"
+  },
+  "type": "sunglasses",
+  "name": "Bold Yellow Vision",
+  "material": "Nhựa dẻo",
+  "description": "Kính mát màu vàng nổi bật, phong cách cá tính.",
+  "price_vnd": 1320000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f007"
+    }
+  ],
+  "stock_quantity": 19,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/bold-yellow.jpg"
+  ],
+  "category_id": {
+    "$oid": "4d16c09be2d64f409d53055b"
+  },
+  "slug": "bold-yellow-vision",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d009"
+  },
+  "type": "accessories",
+  "name": "Adjustable Glasses Cord",
+  "material": "Dây dù co giãn",
+  "description": "Dây giữ kính có thể điều chỉnh chiều dài, phù hợp mọi độ tuổi.",
+  "price_vnd": 250000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    },
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f008"
+    }
+  ],
+  "stock_quantity": 45,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/adjustable-cord.jpg"
+  ],
+  "category_id": {
+    "$oid": "7fd4436ea24f4d7989628bc5"
+  },
+  "slug": "adjustable-glasses-cord",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "64f9b154a1a1a1a1a1a1d00a"
+  },
+  "type": "eyeglasses",
+  "name": "Sharp Square Red",
+  "material": "Kim loại",
+  "description": "Gọng kính đỏ kiểu vuông mạnh mẽ, nổi bật mọi góc nhìn.",
+  "price_vnd": 1400000,
+  "colors": [
+    {
+      "$oid": "64d8c4f2a5d2a5bdf0a1f006"
+    }
+  ],
+  "stock_quantity": 14,
+  "in_stock": true,
+  "images": [
+    "https://example.com/images/sharp-red.jpg"
+  ],
+  "category_id": {
+    "$oid": "5051db2e5edc43628558a851"
+  },
+  "slug": "sharp-square-red",
+  "created_at": "2025-08-08T00:00:00Z",
+  "updated_at": "2025-08-08T00:00:00Z"
+}]

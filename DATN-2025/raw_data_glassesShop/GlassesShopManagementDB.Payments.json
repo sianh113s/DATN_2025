@@ -1,0 +1,162 @@
+[
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000101"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010001"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000101"
+    },
+    "payment_method": "VNPAY",
+    "transaction_id": "VN202508020001",
+    "amount": 2730000,
+    "status": "success",
+    "payment_time": "2025-08-02T10:05:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000102"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010003"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000102"
+    },
+    "payment_method": "COD",
+    "transaction_id": null,
+    "amount": 1480000,
+    "status": "pending",
+    "payment_time": null
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000103"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010004"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000103"
+    },
+    "payment_method": "MOMO",
+    "transaction_id": "MM202508040001",
+    "amount": 1130000,
+    "status": "success",
+    "payment_time": "2025-08-04T15:40:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000104"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010006"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000104"
+    },
+    "payment_method": "COD",
+    "transaction_id": null,
+    "amount": 2730000,
+    "status": "success",
+    "payment_time": "2025-08-07T09:00:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000105"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010007"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000105"
+    },
+    "payment_method": "VNPAY",
+    "transaction_id": "VN202508060001",
+    "amount": 1690000,
+    "status": "success",
+    "payment_time": "2025-08-06T14:15:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000106"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010009"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000106"
+    },
+    "payment_method": "COD",
+    "transaction_id": null,
+    "amount": 1490000,
+    "status": "pending",
+    "payment_time": null
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000107"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010010"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000107"
+    },
+    "payment_method": "MOMO",
+    "transaction_id": "MM202508080001",
+    "amount": 900000,
+    "status": "success",
+    "payment_time": "2025-08-09T09:15:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000108"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010013"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000108"
+    },
+    "payment_method": "VNPAY",
+    "transaction_id": "VN202508090001",
+    "amount": 2750000,
+    "status": "success",
+    "payment_time": "2025-08-09T13:25:00Z"
+  },
+  {
+    "_id": {
+      "$oid": "66fa42010000000000000109"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010016"
+    },
+    "order_id": {
+      "$oid": "66fa3a010000000000000109"
+    },
+    "payment_method": "COD",
+    "transaction_id": null,
+    "amount": 2170000,
+    "status": "pending",
+    "payment_time": null
+  },
+  {
+    "_id": {
+      "$oid": "66fa4201000000000000010A"
+    },
+    "user_id": {
+      "$oid": "66bde0010000000000010002"
+    },
+    "order_id": {
+      "$oid": "66fa3a01000000000000010A"
+    },
+    "payment_method": "VNPAY",
+    "transaction_id": "VN202508110001",
+    "amount": 3650000,
+    "status": "success",
+    "payment_time": "2025-08-11T09:20:00Z"
+  }
+]
