@@ -3,26 +3,20 @@ const router = express.Router();
 const config = require("config");
 
 // Import controllers
-const UserController = require("../apps/controllers/UserController");
-const CartController = require("../apps/controllers/CartController");
+
 const CategoryController = require("../apps/controllers/CategoryController");
-const ColorController = require("../apps/controllers/ColorController");
-const DiscountController = require("../apps/controllers/DiscountController");
 const ProductController = require("../apps/controllers/ProductController");
 const OrderController = require("../apps/controllers/OrderController");
-const PaymentController = require("../apps/controllers/PaymentController");
-const ReviewController = require("../apps/controllers/ReviewController");
+const AuthController = require("../apps/controllers/AuthController");
+const UserController = require("../apps/controllers/UserController");
+// Import middlewares
+const AuthMiddleware = require("../apps/middlewares/auth");
 
 // Routers
-router.get(`${config.get('app.prefixApiVerSion')}/user`, UserController.index);
-router.get(`${config.get('app.prefixApiVerSion')}/cart`, CartController.index);
 router.get(`${config.get('app.prefixApiVerSion')}/category`, CategoryController.index);
 router.get(`${config.get('app.prefixApiVerSion')}/category/:id`, CategoryController.show);
 router.get(`${config.get('app.prefixApiVerSion')}/category/:id/products`, CategoryController.categoryProducts);
 
-router.get(`${config.get('app.prefixApiVerSion')}/color`, ColorController.index);
-router.get(`${config.get('app.prefixApiVerSion')}/discount`, DiscountController.index);
-// router.get(`${config.get('app.prefixApiVerSion')}/order`, DiscountController.index);
 
 router.get(`${config.get('app.prefixApiVerSion')}/product`, ProductController.index);
 router.get(`${config.get('app.prefixApiVerSion')}/product/:id`, ProductController.show);
@@ -30,9 +24,20 @@ router.get(`${config.get('app.prefixApiVerSion')}/product/:id/reviews`, ProductC
 router.post(`${config.get('app.prefixApiVerSion')}/product/:id/reviews`, ProductController.storeReviews);
 
 router.post(`${config.get('app.prefixApiVerSion')}/order`, OrderController.order);
-router.get(`${config.get('app.prefixApiVerSion')}/payment`, PaymentController.index);
-router.get(`${config.get('app.prefixApiVerSion')}/review`, ReviewController.index);
 
+router.post(`${config.get('app.prefixApiVerSion')}/user/logout`,
+  AuthMiddleware.verifyAuthenticationCustomer,
+  AuthController.logoutUser);
+router.post(`${config.get('app.prefixApiVerSion')}/user/login`, AuthController.loginUser);
+router.post(`${config.get('app.prefixApiVerSion')}/user/:id/update`, UserController.update);
+router.post(`${config.get('app.prefixApiVerSion')}/user/register`, AuthController.registerUser);
+router.post(`${config.get('app.prefixApiVerSion')}/auth/refresh-token`, AuthController.refreshToken);
+router.get(`${config.get('app.prefixApiVerSion')}/user/logintest`,
+  AuthMiddleware.verifyAuthenticationCustomer,
+  (req, res) => {
+    return res.status(200).json({ message: "Authentication Success" });
+  }
+);
 
 router.get("/", (req, res) => {
   res.send("<p>Home</p>");
