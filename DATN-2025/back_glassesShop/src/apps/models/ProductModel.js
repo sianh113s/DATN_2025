@@ -20,17 +20,10 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    price_vnd: {
       type: Number,
       required: true,
     },
-    color: [
-      {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "Colors",
-        required: true,
-      },
-    ],
     stock_quantity: {
       type: Number,
       required: true,
@@ -39,14 +32,13 @@ const productSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
-    images: [
-      {
-        type: String,
-        required: true,
-      },
-    ],
+    images: {
+      type: String,
+      required: true,
+    },
+
     category_id: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Categories",
       required: true,
     },

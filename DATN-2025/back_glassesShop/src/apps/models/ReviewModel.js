@@ -4,12 +4,12 @@ const mongoose = require("../../common/init.mongo")();
 const reviewSchema = new mongoose.Schema(
   {
     product_id: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Products",
       required: true,
     },
     user_id: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Users",
       required: true,
     },

@@ -4,7 +4,7 @@ const mongoose = require("../../common/init.mongo")();
 const orderSchema = new mongoose.Schema(
   {
     user_id: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
     },
     items: [
@@ -33,7 +33,7 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
     discount_id: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Discounts",
       default: null,
     },

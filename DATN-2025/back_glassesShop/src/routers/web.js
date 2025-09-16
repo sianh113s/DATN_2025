@@ -39,30 +39,8 @@ router.get(`${config.get('app.prefixApiVerSion')}/user/logintest`,
   }
 );
 
-router.get("/", (req, res) => {
-  res.send("<p>Home</p>");
-});
-
-router.get("/admin/login", (req, res) => {
-  res.send("<p>admin/login</p>");
-});
-router.get("/admin/logout", (req, res) => {
-  res.send("<p>admin/logout</p>");
-});
-router.get("/admin/dashboard", (req, res) => {
-  res.send("<p>/admin/dashboard</p>");
-});
-router.get("/admin/product", (req, res) => {
-  res.send("<p>admin/product</p>");
-});
-router.get("/admin/product/create", (req, res) => {
-  res.send("<p>admin/product/create</p>");
-});
-router.get("/admin/product/edit/:id", (req, res) => {
-  res.send("<p>admin/product/edit/:id</p>");
-});
-router.get("/admin/product/delete/:id", (req, res) => {
-  res.send("<p>admin/product/delete/:id</p>");
-});
+router.post(`${config.get('app.prefixApiVerSion')}/admin/product/create`, ProductController.createProduct);
+router.put(`${config.get('app.prefixApiVerSion')}/admin/product/update/:id`, ProductController.updateProduct);
+router.delete(`${config.get('app.prefixApiVerSion')}/admin/product/delete/:id`, ProductController.deleteProduct);
 
 module.exports = router;
