@@ -20,3 +20,16 @@ exports.update = async (req, res) => {
     return res.status(500).json({ message: "Server Error" })
   }
 }
+
+exports.deleteUser = async (req, res) => {
+  try {
+    const user = await UserModel.findByIdAndDelete(req.params.id);
+    if (!user) {
+      return res.status(404).json({ status: "Delete Failed", message: "User không tồn tại" });
+    }
+    res.status(200).json({ status: "Delete Success" });
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    res.status(500).json({ status: "Delete Failed", message: error.message });
+  }
+};

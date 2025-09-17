@@ -9,8 +9,10 @@ const ProductController = require("../apps/controllers/ProductController");
 const OrderController = require("../apps/controllers/OrderController");
 const AuthController = require("../apps/controllers/AuthController");
 const UserController = require("../apps/controllers/UserController");
+const DiscountController = require("../apps/controllers/DiscountController");
 // Import middlewares
 const AuthMiddleware = require("../apps/middlewares/auth");
+const UserModel = require("../apps/models/UserModel");
 
 // Routers
 router.get(`${config.get('app.prefixApiVerSion')}/category`, CategoryController.index);
@@ -38,9 +40,17 @@ router.get(`${config.get('app.prefixApiVerSion')}/user/logintest`,
     return res.status(200).json({ message: "Authentication Success" });
   }
 );
-
+// Admin Product Management
 router.post(`${config.get('app.prefixApiVerSion')}/admin/product/create`, ProductController.createProduct);
 router.put(`${config.get('app.prefixApiVerSion')}/admin/product/update/:id`, ProductController.updateProduct);
 router.delete(`${config.get('app.prefixApiVerSion')}/admin/product/delete/:id`, ProductController.deleteProduct);
 
+// Admin Discount Management
+router.get(`${config.get('app.prefixApiVerSion')}/admin/discount`, DiscountController.index);
+router.post(`${config.get('app.prefixApiVerSion')}/admin/discount/create`, DiscountController.createVoucher);
+router.put(`${config.get('app.prefixApiVerSion')}/admin/discount/update/:id`, DiscountController.updateVoucher);
+router.delete(`${config.get('app.prefixApiVerSion')}/admin/discount/delete/:id`, DiscountController.deleteVoucher);
+
+// Admin User Management
+router.delete(`${config.get('app.prefixApiVerSion')}/admin/user/delete/:id`, UserController.deleteUser);
 module.exports = router;
