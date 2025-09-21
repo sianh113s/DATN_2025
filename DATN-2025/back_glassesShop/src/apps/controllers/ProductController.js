@@ -2,8 +2,8 @@ const express = require("express");
 const ProductModel = require("../models/ProductModel");
 const pagination = require("../../../lib/pagination");
 const ReviewModel = require("../models/ReviewModel");
-const { has } = require("config");
-const e = require("express");
+// const { has } = require("config");
+// const e = require("express");
 exports.index = async (req, res) => {
   try {
     // ProductModel.find({})

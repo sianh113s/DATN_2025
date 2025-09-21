@@ -3,10 +3,6 @@ const { type } = require("os");
 const mongoose = require("../../common/init.mongo")();
 const productSchema = new mongoose.Schema(
   {
-    type: {
-      type: String,
-      required: true,
-    },
     name: {
       type: String,
       text: true,

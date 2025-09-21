@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <>
@@ -81,9 +83,9 @@ const Header = () => {
             </div>
             <div className="offcanvas-body justify-content-between align-items-center">
               <div className="main-logo">
-                <a href="index.html">
+                <Link to="/">
                   <img src="images/logo.png" alt="logo" className="img-fluid" />
-                </a>
+                </Link>
               </div>
               <ul className="navbar-nav menu-list list-unstyled d-flex gap-md-3 ps-lg-5 mb-0">
                 <li className="nav-item">
