@@ -1,7 +1,6 @@
 const Header = () => {
   return (
-    <div>
-      {/* Header */}
+    <>
       {/* Cart */}
       <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex={-1} id="offcanvasCart" aria-labelledby="My Cart">
         <div className="offcanvas-header justify-content-center">
@@ -156,8 +155,8 @@ const Header = () => {
         </div>
       </nav>
       {/* End Menu */}
-      {/* End Header   */}
-    </div>
-
+    </>
   );
 }
+
+export default Header;
