@@ -27,6 +27,8 @@ router.post(`${config.get('app.prefixApiVerSion')}/product/:id/reviews`, Product
 
 router.post(`${config.get('app.prefixApiVerSion')}/order`, OrderController.order);
 
+router.get(`${config.get('app.prefixApiVerSion')}/user`, UserController.index);
+
 router.post(`${config.get('app.prefixApiVerSion')}/user/logout`,
   AuthMiddleware.verifyAuthenticationCustomer,
   AuthController.logoutUser);

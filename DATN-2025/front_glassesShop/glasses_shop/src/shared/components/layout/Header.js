@@ -1,8 +1,9 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getCategory } from "../../services/Api";
-import { getCategoryProducts } from "../../services/Api";
 const Header = () => {
+  const navigate = useNavigate();
+  const [keyword, setKeyword] = useState("")
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategory()
@@ -10,6 +11,8 @@ const Header = () => {
       .catch((error) => console.log(error)
       )
   }, [])
+  const handleKeywordChange = (e) => setKeyword(e.target.value)
+  const handleSubmitSearch = () => navigate(`Search?keyword=${keyword}`)
   return (
     <>
       {/* Cart */}
@@ -66,10 +69,31 @@ const Header = () => {
               Search
             </h4>
             <div className="search-bar border rounded-2 border-dark-subtle">
-              <form id="search-form" className="text-center d-flex align-items-center" action="true" method="true">
-                <input type="text" className="form-control border-0 bg-transparent" placeholder="Search Here" />
-                <iconify-icon icon="tabler:search" className="fs-4 me-3" />
-              </form>
+              <div className="search-bar border rounded-2 border-dark-subtle">
+                <form
+                  id="search-form"
+                  className="text-center d-flex align-items-center"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSubmitSearch();
+                  }}
+                >
+                  <input
+                    type="text"
+                    className="form-control border-0 bg-transparent"
+                    placeholder="Search Here"
+                    value={keyword}
+                    onChange={handleKeywordChange}
+                  />
+                  <button
+                    type="submit"
+                    className="btn p-0 ms-3"
+                    style={{ background: "transparent", border: "none" }}
+                  >
+                    <iconify-icon icon="tabler:search" className="fs-4" />
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

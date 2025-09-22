@@ -13,7 +13,7 @@ const ProductItem = ({ item }) => {
               <Link to="/Cart" className="btn-wrap cart-link d-flex align-items-center text-capitalize fs-6 ">
                 <i className="icon icon-shopping-cart" />
               </Link>
-              <Link to={`/ProductDetail-${item._id}`} className="view-btn mt-1">
+              <Link to={`/ProductDetail/${item._id}`} className="view-btn mt-1">
                 <i className="icon icon-screen-full" />
               </Link>
             </div>

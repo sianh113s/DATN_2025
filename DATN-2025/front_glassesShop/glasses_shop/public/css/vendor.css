@@ -1429,3 +1429,22 @@ body.chocolat-open>.chocolat-image-wrapper {
 .chocolat-zoomable.chocolat-zooming-out .chocolat-img {
     transition: margin .2s ease;
 }
+
+/* Reviews card */
+.card-body h6 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-body small {
+    font-size: 0.75rem;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+textarea.form-control {
+    resize: none;
+}

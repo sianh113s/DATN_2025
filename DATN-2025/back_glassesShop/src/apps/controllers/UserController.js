@@ -1,6 +1,21 @@
 const express = require("express");
 const UserModel = require("../models/UserModel");
 
+exports.index = async (req, res) => {
+  try {
+    const users = await UserModel.find(); // Lấy tất cả user
+    res.status(200).json({
+      status: "Success",
+      data: users,
+    });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    res.status(500).json({
+      status: "Failed",
+      message: "Server Error",
+    });
+  }
+};
 exports.update = async (req, res) => {
   try {
     const { id } = req.params;

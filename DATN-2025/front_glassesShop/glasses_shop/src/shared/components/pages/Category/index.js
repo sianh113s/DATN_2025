@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import ProductItem from "../../product-item";
 const Category = () => {
   const [products, setProducts] = useState([]);
+  const [categoryName, setCategoryName] = useState("")
   const { id } = useParams();
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
+
     getCategoryProducts(id, {
       params: {
         limit: 8,
@@ -25,7 +27,7 @@ const Category = () => {
     <>
       <section className="product-store">
         <div className="container-fluid px-3 px-md-5 padding-medium">
-          <h4 className=" fw-light text-lowercase ">{pages.totalRows} sản phẩm</h4>
+          <h4 className=" fw-light text-lowercase ">{pages.totalRows} sản phẩm </h4>
           <div className="row">
             {/* ProductItem */}
             {
