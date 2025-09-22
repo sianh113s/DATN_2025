@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { getCategory } from "../../services/Api";
+import { getCategoryProducts } from "../../services/Api";
 const Header = () => {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    getCategory()
+      .then(({ data }) => setCategories(data.data))
+      .catch((error) => console.log(error)
+      )
+  }, [])
   return (
     <>
       {/* Cart */}
@@ -57,7 +66,7 @@ const Header = () => {
               Search
             </h4>
             <div className="search-bar border rounded-2 border-dark-subtle">
-              <form id="search-form" className="text-center d-flex align-items-center" action method>
+              <form id="search-form" className="text-center d-flex align-items-center" action="true" method="true">
                 <input type="text" className="form-control border-0 bg-transparent" placeholder="Search Here" />
                 <iconify-icon icon="tabler:search" className="fs-4 me-3" />
               </form>
@@ -70,9 +79,9 @@ const Header = () => {
       <nav className="main-menu d-flex navbar fixed-top navbar-expand-lg py-4 ">
         <div className="container-fluid px-md-5">
           <div className="main-logo d-lg-none">
-            <a href="index.html">
+            <Link to="/">
               <img src="images/logo.png" alt="logo" className="img-fluid" />
-            </a>
+            </Link>
           </div>
           <button className="navbar-toggler border-0 shadow-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon" />
@@ -89,25 +98,22 @@ const Header = () => {
               </div>
               <ul className="navbar-nav menu-list list-unstyled d-flex gap-md-3 ps-lg-5 mb-0">
                 <li className="nav-item">
-                  <a href="index.html" className="nav-link mx-2 active">Trang chủ</a>
+                  <Link to="/" className="nav-link mx-2 active">Trang chủ</Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link mx-2" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Gọng
-                    kính cận</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link mx-2" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Kính
-                    mát</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link mx-2" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Phụ
-                    kiện</a>
-                </li>
-                {/* <li class="nav-item">
-        <a href="https://templatesjungle.gumroad.com/l/eyewear-eyeglasses-ecommerce-website-template"
-          class="nav-link fw-bold mx-2" target="_blank">GET PRO</a>
-      </li> */}
+                {categories.map(category => (
+                  <li className="nav-item" key={category._id}>
+                    <NavLink
+                      to={`/Category/${category._id}`}
+                      className={({ isActive }) =>
+                        `nav-link mx-2 ${isActive ? "active text-decoration-underline" : ""}`
+                      }
+                    >
+                      {category.name}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
+
               <div className="d-none d-lg-flex justify-content-end">
                 <ul className="d-flex justify-content-end list-unstyled m-0">
                   <li className="lh-1">

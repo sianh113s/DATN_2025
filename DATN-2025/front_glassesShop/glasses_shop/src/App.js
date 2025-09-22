@@ -3,27 +3,21 @@ import Footer from "./shared/components/layout/Footer";
 import Header from "./shared/components/layout/Header";
 import Service from "./shared/components/layout/Service";
 import Slider from "./shared/components/layout/Slider";
-import Home from "./shared/components/Home";
+import Home from "./shared/components/pages/Home";
+import Category from "./shared/components/pages/Category";
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <div>
-          <div className="preloader-wrapper">
-            <div className="preloader">
-            </div>
-          </div>
-          <Header />
-          <Slider />
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-          <Service />
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Slider />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Category/:id" element={<Category />} />
+      </Routes>
+      <Service />
+      <Footer />
+    </BrowserRouter>
   );
 };
 

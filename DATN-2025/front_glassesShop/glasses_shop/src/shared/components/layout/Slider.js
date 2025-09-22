@@ -65,7 +65,7 @@ const Slider = () => {
       </Swiper>
 
       {/* CSS inline hoặc file riêng */}
-      <style jsx>{`
+      <style jsx="true">{`
         .slide-content {
           position: absolute;
           top: 50%;

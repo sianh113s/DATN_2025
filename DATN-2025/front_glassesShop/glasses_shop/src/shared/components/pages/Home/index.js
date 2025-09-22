@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { getProducts } from "../../services/Api";
-import ProductItem from "../product-item";
+import { getProducts } from "../../../services/Api";
+import ProductItem from "../../product-item";
 const Home = () => {
   const [saleProducts, setSaleProducts] = useState([]);
   const [newProducts, setNewProducts] = useState([]);
