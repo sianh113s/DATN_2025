@@ -16,6 +16,32 @@ exports.index = async (req, res) => {
     });
   }
 };
+exports.profile = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const user = await UserModel.findById(id).select("-password");
+    // loại bỏ password khi trả về
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Không tìm thấy người dùng",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      data: user,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Lỗi server",
+      error: error.message,
+    });
+  }
+}
 exports.update = async (req, res) => {
   try {
     const { id } = req.params;

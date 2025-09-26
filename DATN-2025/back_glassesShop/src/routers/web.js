@@ -26,8 +26,10 @@ router.get(`${config.get('app.prefixApiVerSion')}/product/:id/reviews`, ProductC
 router.post(`${config.get('app.prefixApiVerSion')}/product/:id/reviews`, ProductController.storeReviews);
 
 router.post(`${config.get('app.prefixApiVerSion')}/order`, OrderController.order);
+router.get(`${config.get('app.prefixApiVerSion')}/order/:id`, OrderController.index);
 
 router.get(`${config.get('app.prefixApiVerSion')}/user`, UserController.index);
+router.get(`${config.get('app.prefixApiVerSion')}/user/:id`, UserController.profile);
 
 router.post(`${config.get('app.prefixApiVerSion')}/user/logout`,
   AuthMiddleware.verifyAuthenticationCustomer,
@@ -48,7 +50,7 @@ router.put(`${config.get('app.prefixApiVerSion')}/admin/product/update/:id`, Pro
 router.delete(`${config.get('app.prefixApiVerSion')}/admin/product/delete/:id`, ProductController.deleteProduct);
 
 // Admin Discount Management
-router.get(`${config.get('app.prefixApiVerSion')}/admin/discount`, DiscountController.index);
+router.get(`${config.get('app.prefixApiVerSion')}/discount`, DiscountController.index);
 router.post(`${config.get('app.prefixApiVerSion')}/admin/discount/create`, DiscountController.createVoucher);
 router.put(`${config.get('app.prefixApiVerSion')}/admin/discount/update/:id`, DiscountController.updateVoucher);
 router.delete(`${config.get('app.prefixApiVerSion')}/admin/discount/delete/:id`, DiscountController.deleteVoucher);

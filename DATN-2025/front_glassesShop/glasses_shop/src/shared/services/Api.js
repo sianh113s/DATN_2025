@@ -6,3 +6,7 @@ export const getProduct = (id, config) => Http.get(`/product/${id}`, config);
 export const getProductReviews = (id, config) => Http.get(`/product/${id}/reviews`, config);
 export const getUser = (config) => Http.get("/user", config);
 export const createReview = (id, data) => Http.post(`/product/${id}/reviews`, data);
+export const loginUser = (data) => Http.post(`/user/login`, data);
+export const registerUser = (data) => Http.post(`/user/register`, data);
+export const profileUser = (id) => Http.get(`/user/${id}`);
+export const getOrdersByUserId = (id, config) => Http.get(`/orders/${id}`, config);

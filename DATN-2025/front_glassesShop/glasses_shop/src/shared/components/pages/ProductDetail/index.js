@@ -3,6 +3,9 @@ import { getProduct, getProductReviews, getUser, createReview } from "../../../s
 import { useParams } from "react-router-dom";
 import { getImageProduct } from "../../../until";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../../redux_setup/reducer/cart";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
@@ -11,6 +14,8 @@ const ProductDetail = () => {
   const [inputComment, setInputComment] = useState({});
   const [users, setUsers] = useState({}); // dùng object thay vì array
   const { id } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const changeInputComment = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
@@ -74,6 +79,19 @@ const ProductDetail = () => {
       })
       .catch((error) => console.log(error));
   }
+  const clickAddToCart = (type) => {
+    dispatch(addToCart({
+      _id: id,
+      product_name: productDetail.name,
+      quantity: quantity,
+      price_vnd: productDetail.price_vnd,
+      image: productDetail.images,
+    }))
+    if (type === "buy-now") {
+      return navigate("/Cart");
+    }
+  }
+
   return (
     <div style={{ minHeight: "100vh" }}>
       {/* Product Detail */}
@@ -132,14 +150,14 @@ const ProductDetail = () => {
                   >
                     +
                   </button>
-                  <button className="btn btn-outline-dark ms-3">
+                  <button onClick={clickAddToCart} className="btn btn-outline-dark ms-3">
                     Thêm vào giỏ hàng
                   </button>
                 </div>
 
                 {/* Buy Now */}
                 <div className="d-grid mb-3">
-                  <button className="btn btn-dark">Mua ngay</button>
+                  <button onClick={() => clickAddToCart("buy-now")} className="btn btn-dark">Mua ngay</button>
                 </div>
 
                 {/* Description */}
