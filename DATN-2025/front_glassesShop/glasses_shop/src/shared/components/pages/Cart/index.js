@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import { getImageProduct } from "../../../until";
 import { updateItemCart, deleteItemCart } from "../../../../redux_setup/reducer/cart";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
   const itemsCart = useSelector(({ cart }) => cart.items)
 
   const [products, setProducts] = useState([]);
@@ -22,6 +25,15 @@ const Cart = () => {
     };
     fetchProducts();
   }, []);
+
+  useEffect(() => {
+    // Lấy user từ localStorage
+    const storedUser = localStorage.getItem("userData");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
   const changeQty = (e, id) => {
     const value = Number(e.target.value)
 
@@ -102,7 +114,7 @@ const Cart = () => {
         <div className="card p-3 shadow-sm" style={{ width: "300px" }}>
           <h5>Tổng cộng</h5>
           <p className="mb-3 fw-bold">Tổng: {totalPrice.toLocaleString()}₫</p>
-          <button className="btn btn-primary w-100">Thanh toán</button>
+          <button onClick={() => navigate("/payment")} className="btn btn-primary w-100">Thanh toán</button>
         </div>
       </div>
     </div>

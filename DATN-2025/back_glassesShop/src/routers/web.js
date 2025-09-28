@@ -10,6 +10,7 @@ const OrderController = require("../apps/controllers/OrderController");
 const AuthController = require("../apps/controllers/AuthController");
 const UserController = require("../apps/controllers/UserController");
 const DiscountController = require("../apps/controllers/DiscountController");
+const PaymentController = require("../apps/controllers/PaymentController");
 // Import middlewares
 const AuthMiddleware = require("../apps/middlewares/auth");
 const UserModel = require("../apps/models/UserModel");
@@ -57,4 +58,6 @@ router.delete(`${config.get('app.prefixApiVerSion')}/admin/discount/delete/:id`,
 
 // Admin User Management
 router.delete(`${config.get('app.prefixApiVerSion')}/admin/user/delete/:id`, UserController.deleteUser);
+router.post(`${config.get('app.prefixApiVerSion')}/payment`, PaymentController.index);
+router.get(`${config.get('app.prefixApiVerSion')}/payment`, PaymentController.paymentResult);
 module.exports = router;

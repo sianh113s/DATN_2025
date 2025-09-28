@@ -12,7 +12,6 @@ const Header = () => {
   const [user, setUser] = useState(null);
   const totalCartItems = useSelector(({ cart }) => cart.items.reduce((total, item) => total + item.quantity, 0))
   const infoCart = useSelector(({ cart }) => cart.items)
-  console.log(infoCart);
 
   // Load categories và user
   useEffect(() => {
@@ -25,10 +24,6 @@ const Header = () => {
     if (userData) setUser(JSON.parse(userData));
   }, []);
 
-  const userd = localStorage.getItem("user")
-  console.log(userd);
-
-  // console.log(`id: ${id}`);
 
 
   // Listen localStorage thay đổi user (login/logout ở tab khác)

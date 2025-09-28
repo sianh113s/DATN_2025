@@ -38,9 +38,10 @@ exports.order = async (req, res) => {
     const order = new OrderModel(body);
     await order.save();
     const { items } = order;
+    const order_id = order._id;
     const products = items.map(item => ({
       name: item.product_name,
-      qty: item.quantity,
+      quantity: item.quantity,
       price: item.price_vnd,
       image: item.image,
       total: item.quantity * item.price_vnd,

@@ -13,6 +13,7 @@ import Login from "./shared/components/pages/Login";
 import Register from "./shared/components/pages/Register";
 import Profile from "./shared/components/pages/Profile";
 import Cart from "./shared/components/pages/Cart";
+import Payment from "./shared/components/pages/payment";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/Register" element={<Register />} />
           <Route path="/Profile/:id" element={<Profile />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Payment" element={<Payment />} />
         </Routes>
         <Service />
         <Footer />

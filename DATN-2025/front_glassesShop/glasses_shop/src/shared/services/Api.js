@@ -9,4 +9,6 @@ export const createReview = (id, data) => Http.post(`/product/${id}/reviews`, da
 export const loginUser = (data) => Http.post(`/user/login`, data);
 export const registerUser = (data) => Http.post(`/user/register`, data);
 export const profileUser = (id) => Http.get(`/user/${id}`);
-export const getOrdersByUserId = (id, config) => Http.get(`/orders/${id}`, config);
+export const getOrdersByUserId = (id, config) => Http.get(`/order/${id}`, config);
+export const order = (data) => Http.post(`/order`, data);
+export const payment = (data) => Http.post(`/payment`, data);
