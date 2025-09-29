@@ -3,6 +3,34 @@ const UserModel = require("../models/UserModel")
 const transporter = require("../../../lib/transporter");
 const ejs = require("ejs");
 
+exports.show = async (req, res) => {
+  try {
+    // Lấy tất cả đơn hàng, mới nhất lên trước
+    const orders = await OrderModel.find()
+      .populate("user_id", "name email") // chỉ lấy name và email từ User
+      .sort({ createdAt: -1 });
+
+    if (!orders || orders.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "Không có đơn hàng nào",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      data: orders,
+    });
+  } catch (err) {
+    console.error("Lỗi khi lấy tất cả đơn hàng:", err);
+    return res.status(500).json({
+      success: false,
+      message: "Server Error",
+    });
+  }
+};
+
+
 exports.index = async (req, res) => {
   try {
     const { id } = req.params; // id = user_id
@@ -29,6 +57,39 @@ exports.index = async (req, res) => {
     });
   }
 };
+exports.updateOrder = async (req, res) => {
+  try {
+    const { id } = req.params; // id = order_id
+    const { status } = req.body; // admin gửi lên trạng thái mới hoặc field khác
+
+    // tìm và cập nhật order
+    const order = await OrderModel.findByIdAndUpdate(
+      id,
+      { status }, // có thể bổ sung các field khác nếu cần
+      { new: true } // trả về document sau khi update
+    );
+
+    if (!order) {
+      return res.status(404).json({
+        success: false,
+        message: "Không tìm thấy đơn hàng",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Cập nhật đơn hàng thành công",
+      data: order,
+    });
+  } catch (err) {
+    console.error("Lỗi khi cập nhật đơn hàng:", err);
+    return res.status(500).json({
+      success: false,
+      message: "Server Error",
+    });
+  }
+};
+
 
 exports.order = async (req, res) => {
   try {

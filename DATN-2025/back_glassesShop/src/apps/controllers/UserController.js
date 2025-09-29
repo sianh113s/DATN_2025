@@ -1,12 +1,21 @@
 const express = require("express");
 const UserModel = require("../models/UserModel");
-
+const pagination = require("../../../lib/pagination");
 exports.index = async (req, res) => {
   try {
-    const users = await UserModel.find(); // Lấy tất cả user
+    const query = {};
+    const limit = Number(req.query.limit) || 9;
+    const page = Number(req.query.page) || 1;
+    const skip = page * limit - limit;
+    const users = await UserModel.find(query) // Lấy tất cả user
+      .skip(skip)
+    // .limit(limit)
     res.status(200).json({
       status: "Success",
-      data: users,
+      data: {
+        docs: users,
+        pages: await pagination(page, limit, UserModel, query),
+      },
     });
   } catch (error) {
     console.error("Error fetching users:", error);

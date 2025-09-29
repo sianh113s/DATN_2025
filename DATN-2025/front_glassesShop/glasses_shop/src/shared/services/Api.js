@@ -5,10 +5,13 @@ export const getCategoryProducts = (id, config) => Http.get(`/category/${id}/pro
 export const getProduct = (id, config) => Http.get(`/product/${id}`, config);
 export const getProductReviews = (id, config) => Http.get(`/product/${id}/reviews`, config);
 export const getUser = (config) => Http.get("/user", config);
+export const deleteUser = (id, config) => Http.delete(`user/delete/${id}`, config);
 export const createReview = (id, data) => Http.post(`/product/${id}/reviews`, data);
 export const loginUser = (data) => Http.post(`/user/login`, data);
 export const registerUser = (data) => Http.post(`/user/register`, data);
 export const profileUser = (id) => Http.get(`/user/${id}`);
 export const getOrdersByUserId = (id, config) => Http.get(`/order/${id}`, config);
 export const order = (data) => Http.post(`/order`, data);
+export const getOrder = (data) => Http.get(`/order`, data);
 export const payment = (data) => Http.post(`/payment`, data);
+export const updateOrder = (id, data) => Http.put(`/order/update/${id}`, data);

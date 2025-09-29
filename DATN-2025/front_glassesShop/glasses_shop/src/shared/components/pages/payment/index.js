@@ -96,6 +96,7 @@ const Payment = () => {
       })
         .then(({ data }) => {
           console.log(data);
+          navigate("/order/history")
         })
         .catch((error) => console.log(error));
     }

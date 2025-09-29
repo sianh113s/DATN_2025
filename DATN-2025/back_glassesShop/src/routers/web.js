@@ -28,6 +28,8 @@ router.post(`${config.get('app.prefixApiVerSion')}/product/:id/reviews`, Product
 
 router.post(`${config.get('app.prefixApiVerSion')}/order`, OrderController.order);
 router.get(`${config.get('app.prefixApiVerSion')}/order/:id`, OrderController.index);
+router.get(`${config.get('app.prefixApiVerSion')}/order`, OrderController.show);
+router.put(`${config.get('app.prefixApiVerSion')}/order/update/:id`, OrderController.updateOrder);
 
 router.get(`${config.get('app.prefixApiVerSion')}/user`, UserController.index);
 router.get(`${config.get('app.prefixApiVerSion')}/user/:id`, UserController.profile);
@@ -57,7 +59,7 @@ router.put(`${config.get('app.prefixApiVerSion')}/admin/discount/update/:id`, Di
 router.delete(`${config.get('app.prefixApiVerSion')}/admin/discount/delete/:id`, DiscountController.deleteVoucher);
 
 // Admin User Management
-router.delete(`${config.get('app.prefixApiVerSion')}/admin/user/delete/:id`, UserController.deleteUser);
+router.delete(`${config.get('app.prefixApiVerSion')}/user/delete/:id`, UserController.deleteUser);
 router.post(`${config.get('app.prefixApiVerSion')}/payment`, PaymentController.index);
 router.get(`${config.get('app.prefixApiVerSion')}/payment`, PaymentController.paymentResult);
 module.exports = router;
