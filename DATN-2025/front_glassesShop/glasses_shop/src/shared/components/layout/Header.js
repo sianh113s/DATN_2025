@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
 
   const [keyword, setKeyword] = useState("");
   const [categories, setCategories] = useState([]);
@@ -89,8 +91,11 @@ const Header = () => {
                 <strong>{totalPrice.toLocaleString()}đ</strong>
               </li>
             </ul>
-            <button onClick={clickMoveToCart} className="w-100 btn btn-dark" type="submit">
-              Move to Cart
+            <button onClick={clickMoveToCart} className="w-100 btn btn-dark mb-2" type="submit">
+              Giỏ Hàng
+            </button>
+            <button onClick={() => navigate(`/History/${userData._id}`)} className="w-100 btn btn-dark" style={{ width: "80%" }} >
+              Lịch sử mua hàng
             </button>
           </div>
         </div>

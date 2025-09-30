@@ -2,6 +2,8 @@ const express = require("express");
 const ProductModel = require("../models/ProductModel");
 const pagination = require("../../../lib/pagination");
 const ReviewModel = require("../models/ReviewModel");
+const fs = require("fs");
+const path = require("path");
 // const { has } = require("config");
 // const e = require("express");
 exports.index = async (req, res) => {
@@ -102,38 +104,53 @@ exports.createProduct = async (req, res) => {
       description,
       price_vnd,
       stock_quantity,
-      in_stock,
-      images,
-      slug,
       category_id,
     } = req.body;
-    const newProducts = new ProductModel({
+
+    // Nếu có upload file thì lấy đường dẫn ảnh
+    const imagePath = req.file.filename || "";
+
+    const newProduct = new ProductModel({
       type,
       name,
       material,
       description,
       price_vnd,
       stock_quantity,
-      in_stock,
-      images,
-      slug,
+      in_stock: stock_quantity > 0,
+      images: imagePath,
       category_id,
     });
-    await newProducts.save();
+
+    await newProduct.save();
+
     return res.status(201).json({
       status: "Success",
-      data: newProducts,
+      data: newProduct,
     });
-  }
-  catch (error) {
-    res.status(500).json({ error });
+  } catch (error) {
+    console.error("Lỗi khi tạo sản phẩm:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 // Cap nhat san pham
 exports.updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
-    const updateData = req.body;
+    const updateData = { ...req.body };
+
+    // Nếu có upload file mới
+    if (req.file) {
+      const dir = path.join(__dirname, "../../public/uploads/images/products");
+
+      // Tạo thư mục nếu chưa có
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      // Lưu đường dẫn ảnh mới
+      updateData.images = `/uploads/images/products/${req.file.filename}`;
+    }
 
     // Nếu có truyền stock_quantity thì tự động set in_stock
     if (updateData.stock_quantity !== undefined) {
@@ -143,25 +160,17 @@ exports.updateProduct = async (req, res) => {
     const updatedProduct = await ProductModel.findByIdAndUpdate(
       id,
       updateData,
-      {
-        new: true,         // trả về document sau khi update
-        runValidators: true // chạy validate theo schema
-      }
+      { new: true, runValidators: true }
     );
 
     if (!updatedProduct) {
-      return res.status(404).json({
-        status: "Error",
-        message: "Không tìm thấy sản phẩm",
-      });
+      return res.status(404).json({ status: "Error", message: "Không tìm thấy sản phẩm" });
     }
 
-    return res.status(200).json({
-      status: "Success",
-      data: updatedProduct,
-    });
+    return res.status(200).json({ status: "Success", data: updatedProduct });
   } catch (error) {
-    return res.status(500).json({ error });
+    console.error("Lỗi cập nhật sản phẩm:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 };
 

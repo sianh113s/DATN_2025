@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { getProducts } from "../../../services/Api";
 import ProductItem from "../../product-item";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   const [saleProducts, setSaleProducts] = useState([]);
   const [newProducts, setNewProducts] = useState([]);
   useEffect(() => {
@@ -40,9 +42,6 @@ const Home = () => {
             {/* End */}
 
           </div>
-          <div className="text-center mt-5 pt-4">
-            <button type="submit" className="btn btn-dark rounded-3">View All Products</button>
-          </div>
         </div>
       </section>
       {/* End Sản phẩm bán chạy */}
@@ -57,9 +56,6 @@ const Home = () => {
                 return <ProductItem key={index} item={item} />
               })
             }
-          </div>
-          <div className="text-center mt-5 pt-4">
-            <button type="submit" className="btn btn-dark rounded-3">View All Products</button>
           </div>
         </div>
       </section>

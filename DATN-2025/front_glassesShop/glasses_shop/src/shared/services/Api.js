@@ -15,3 +15,15 @@ export const order = (data) => Http.post(`/order`, data);
 export const getOrder = (data) => Http.get(`/order`, data);
 export const payment = (data) => Http.post(`/payment`, data);
 export const updateOrder = (id, data) => Http.put(`/order/update/${id}`, data);
+export const createCategory = (data) => Http.post(`/category/create`, data);
+export const updateCategory = (id, data) => Http.put(`/category/update/${id}`, data);
+export const deleteCategory = (id) => Http.delete(`/category/delete/${id}`);
+export const createProduct = (data) =>
+  Http.post(`/product/create`, data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+export const updateProduct = (id, data) => Http.put(`/product/update/${id}`, data);
+export const deleteProduct = (id) => Http.delete(`/product/delete/${id}`);
+export const getOrderById = (id) => Http.get(`/order/${id}`);

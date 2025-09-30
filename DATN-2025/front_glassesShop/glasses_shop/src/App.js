@@ -28,6 +28,7 @@ import Payment from "./shared/components/pages/payment";
 
 // Pages Admin
 import DashBoard from "./shared/components/pages/Admin/DashBoard";
+import History from "./shared/components/pages/History";
 
 //  Layout wrapper: tách riêng admin và user
 const LayoutWrapper = ({ children }) => {
@@ -68,6 +69,7 @@ const App = () => {
               <Route path="/Profile/:id" element={<Profile />} />
               <Route path="/Cart" element={<Cart />} />
               <Route path="/Payment" element={<Payment />} />
+              <Route path="/History/:id" element={<History />} />
 
               {/* Admin Routes */}
               <Route path="/admin/DashBoard" element={<DashBoard />} />

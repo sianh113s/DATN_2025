@@ -38,10 +38,6 @@ const productSchema = new mongoose.Schema(
       ref: "Categories",
       required: true,
     },
-    slug: {
-      type: String,
-      required: true,
-    },
   },
   { timestamps: true }
 );

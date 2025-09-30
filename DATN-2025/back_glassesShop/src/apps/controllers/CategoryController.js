@@ -31,6 +31,87 @@ exports.show = async (req, res) => {
   }
 };
 
+exports.addCategory = async (req, res) => {
+  try {
+    const { name } = req.body;
+
+    if (!name) {
+      return res.status(400).json({
+        status: "Error",
+        message: "Tên danh mục là bắt buộc",
+      });
+    }
+
+    const category = new CategoryModel({
+      name,
+    });
+
+    await category.save();
+
+    return res.status(201).json({
+      status: "Success",
+      message: "Thêm danh mục thành công",
+      data: category,
+    });
+  } catch (error) {
+    console.error("Lỗi khi thêm category:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+exports.updateCategory = async (req, res) => {
+  try {
+    const { id } = req.params; // lấy id từ URL
+    const { name } = req.body;
+
+    const category = await CategoryModel.findById(id);
+    if (!category) {
+      return res.status(404).json({
+        status: "Error",
+        message: "Không tìm thấy danh mục",
+      });
+    }
+
+    category.name = name || category.name;
+
+    await category.save();
+
+    return res.status(200).json({
+      status: "Success",
+      message: "Cập nhật danh mục thành công",
+      data: category,
+    });
+  } catch (error) {
+    console.error("Lỗi khi cập nhật category:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+exports.deleteCategory = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deleted = await CategoryModel.findByIdAndDelete(id);
+
+    if (!deleted) {
+      return res.status(404).json({
+        status: "Error",
+        message: "Không tìm thấy danh mục",
+      });
+    }
+
+    return res.status(200).json({
+      status: "Success",
+      message: "Xóa danh mục thành công",
+      data: deleted,
+    });
+  } catch (error) {
+    console.error("Lỗi khi xóa category:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
 exports.categoryProducts = async (req, res) => {
   try {
     const { id } = req.params;
