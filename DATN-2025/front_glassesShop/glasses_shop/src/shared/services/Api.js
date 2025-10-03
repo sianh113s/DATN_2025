@@ -27,4 +27,5 @@ export const createProduct = (data) =>
 export const updateProduct = (id, data) => Http.put(`/product/update/${id}`, data);
 export const deleteProduct = (id) => Http.delete(`/product/delete/${id}`);
 export const getOrderById = (id) => Http.get(`/order/${id}`);
-export const updateUser = (id, data) => Http.post(`/user/${id}/update`, data) 
+export const updateUser = (id, data) => Http.post(`/user/${id}/update`, data)
+export const getRevenue = () => Http.get(`/revenue`);

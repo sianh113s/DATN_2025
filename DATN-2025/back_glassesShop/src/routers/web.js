@@ -23,7 +23,7 @@ const ProductController = require("../apps/controllers/ProductController");
 const OrderController = require("../apps/controllers/OrderController");
 const AuthController = require("../apps/controllers/AuthController");
 const UserController = require("../apps/controllers/UserController");
-const DiscountController = require("../apps/controllers/DiscountController");
+const RevenueController = require("../apps/controllers/RevenueController");
 const PaymentController = require("../apps/controllers/PaymentController");
 
 // Import middlewares
@@ -83,11 +83,8 @@ router.delete(
   ProductController.deleteProduct
 );
 
-// ================== Admin Discount Management ==================
-router.get(`${config.get("app.prefixApiVerSion")}/discount`, DiscountController.index);
-router.post(`${config.get("app.prefixApiVerSion")}/admin/discount/create`, DiscountController.createVoucher);
-router.put(`${config.get("app.prefixApiVerSion")}/admin/discount/update/:id`, DiscountController.updateVoucher);
-router.delete(`${config.get("app.prefixApiVerSion")}/admin/discount/delete/:id`, DiscountController.deleteVoucher);
+// ================== Revenue ==================
+router.get(`${config.get("app.prefixApiVerSion")}/revenue`, RevenueController.index);
 
 // ================== Admin User Management ==================
 router.delete(`${config.get("app.prefixApiVerSion")}/user/delete/:id`, UserController.deleteUser);

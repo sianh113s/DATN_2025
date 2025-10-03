@@ -38,12 +38,11 @@ const Category = () => {
     getCategoryProducts(id, {
       params: {
         limit: pages.limit || 8,
-        page: currentPage, // IMPORTANT: 'page' (not 'pages')
+        page: currentPage,
       },
     })
       .then(({ data }) => {
         console.log("[Category] API response", data);
-        // data.data.pages theo structure bạn đã post
         setPages((prev) => ({ ...prev, ...data.data.pages }));
         setProducts(data.data.docs || []);
       })

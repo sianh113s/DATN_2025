@@ -5,17 +5,17 @@ const paymentSchema = new mongoose.Schema(
   {
     user_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Users",
+      ref: "User",
       required: true,
     },
     order_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Orders",
+      ref: "Order",
       required: true,
     },
     payment_method: {
       type: String,
-      enum: ["MOMO", "COD", "VNPAY"],
+      enum: ["MOMO", "COD"],
       required: true,
     },
     transaction_id: {
@@ -31,6 +31,10 @@ const paymentSchema = new mongoose.Schema(
       enum: ["pending", "failed", "success"],
       required: true,
     },
+    payment_time: {
+      type: Date,
+      default: null
+    }
   },
   {}
 );

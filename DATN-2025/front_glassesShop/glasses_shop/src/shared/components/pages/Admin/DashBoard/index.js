@@ -1,5 +1,15 @@
 import { Container, Row, Col, Nav, Tab, Modal, Table, Button, Form } from "react-bootstrap";
-import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -15,7 +25,18 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
+  getRevenue
 } from "../../../../services/Api";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 
 // ---------------- Category Modal ----------------
@@ -416,19 +437,25 @@ const DashBoard = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [user, setUser] = useState();
   const navigate = useNavigate();
+  const [revenue, setRevenue] = useState();
+  const [label, setLabel] = useState();
 
-  const weeklyRevenue = [
-    { week: "Tuần 1", revenue: 1200000 },
-    { week: "Tuần 2", revenue: 1500000 },
-    { week: "Tuần 3", revenue: 900000 },
-    { week: "Tuần 4", revenue: 2000000 },
-  ];
+  const getLast6Months = () => {
+    const now = new Date();
+    const months = [];
+    for (let i = 5; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      months.push(`Tháng ${d.getMonth() + 1}`);
+    }
+    return months;
+  };
 
   useEffect(() => {
     fetchUsers();
     fetchOrders();
     fetchCategories();
     fetchProducts();
+    revenue6Month();
   }, []);
   const fetchProducts = () => {
     getProducts({
@@ -456,6 +483,15 @@ const DashBoard = () => {
       .then(({ data }) => setCategories(data.data))
       .catch((error) => console.log(error));
   };
+
+  const revenue6Month = () => {
+    getRevenue()
+      .then(({ data }) => {
+        setLabel(data.data.label);
+        setRevenue(data.data.revenue);
+      })
+      .catch((error) => console.log(error));
+  }
 
   const handleDeleteUser = async (id) => {
     if (window.confirm("Bạn có chắc chắn muốn xóa người dùng này?")) {
@@ -617,11 +653,6 @@ const DashBoard = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="users" className="text-white">
-                Người dùng
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link eventKey="products" className="text-white">
                 Sản phẩm
               </Nav.Link>
@@ -634,6 +665,11 @@ const DashBoard = () => {
             <Nav.Item>
               <Nav.Link eventKey="category" className="text-white">
                 Danh mục
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="users" className="text-white">
+                Người dùng
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -651,17 +687,41 @@ const DashBoard = () => {
               {/* Dashboard */}
               <Tab.Pane eventKey="dashboard">
                 <h2>📊 Thống kê</h2>
-                <p>Thống kê doanh thu theo tuần...</p>
-                <ResponsiveContainer width="100%" height={400}>
-                  <LineChart data={weeklyRevenue} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="week" />
-                    <YAxis />
-                    <Tooltip formatter={(value) => new Intl.NumberFormat('vi-VN').format(value) + ' đ'} />
-                    <Line type="monotone" dataKey="revenue" stroke="#8884d8" strokeWidth={2} />
-                  </LineChart>
-                </ResponsiveContainer>
+                <p>Thống kê doanh thu theo tháng...</p>
+
+                <Line
+                  data={{
+                    labels: label,
+                    datasets: [
+                      {
+                        label: "Doanh thu (VND)",
+                        data: revenue,
+                        borderColor: "#6eabddff",
+                        fill: "origin",
+                        tension: 0.4,
+                        pointBackgroundColor: "#6eabddff",
+                      },
+                    ],
+                  }}
+                  options={{
+                    responsive: true,
+                    plugins: {
+                      legend: {
+                        display: false,
+                      },
+                    },
+                    scales: {
+                      y: {
+                        beginAtZero: true,
+                        ticks: {
+                          callback: (value) => value.toLocaleString() + "₫",
+                        },
+                      },
+                    },
+                  }}
+                />
               </Tab.Pane>
+
 
               {/* Users */}
               <Tab.Pane eventKey="users">
