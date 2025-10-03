@@ -2,8 +2,28 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { useLocation } from "react-router-dom";
 
 const Slider = () => {
+  const location = useLocation();
+  const path = location.pathname;
+
+  // Các trang cần có slider ảnh
+  const isShowSlider =
+    path === "/" ||
+    path.startsWith("/Category") ||
+    path.startsWith("/Search");
+
+  if (!isShowSlider) {
+    return (
+      <div
+        style={{
+          backgroundColor: "black",
+          height: "96px",
+        }}
+      ></div>
+    );
+  }
   return (
     <section id="hero">
       <Swiper

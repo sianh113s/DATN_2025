@@ -61,7 +61,15 @@ exports.reviews = async (req, res) => {
     const reviews = await ReviewModel.find(query)
       .sort({ _id: -1 })
       .skip(skip)
-      .limit(limit);
+      .limit(limit)
+      .populate("user_id", "name");
+    const listReview = reviews.map(
+      r => ({
+        name: r.user_id?.name || "Ẩn danh",
+        comment: r.comment,
+        createdAt: r.createdAt
+      })
+    )
     return res.status(200).json({
       status: "Success",
       filters: {
@@ -70,7 +78,7 @@ exports.reviews = async (req, res) => {
         product_id: id,
       },
       data: {
-        docs: reviews,
+        docs: listReview,
         pages: await pagination(page, limit, ReviewModel, query),
       }
     })

@@ -5,17 +5,13 @@ const reviewSchema = new mongoose.Schema(
   {
     product_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Products",
+      ref: "Product",
       required: true,
     },
     user_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Users",
+      ref: "User",
       required: true,
-    },
-    rating: {
-      type: Number,
-      default: null,
     },
     comment: {
       type: String,

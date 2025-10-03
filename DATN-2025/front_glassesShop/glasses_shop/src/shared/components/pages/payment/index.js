@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getImageProduct } from "../../../until";
 import { Link } from "react-router-dom";
 import { order, payment } from "../../../services/Api";
 import { useNavigate } from "react-router-dom";
+import { clearCart } from "../../../../redux_setup/reducer/cart";
 
 const Payment = () => {
   const [paymentMethod, setPaymentMethod] = useState("cod");
   const [user, setUser] = useState({});
   const [orderInfo, setOrderInfo] = useState({});
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // State cho form
   const [formData, setFormData] = useState({
@@ -80,8 +82,8 @@ const Payment = () => {
         order_id: orderInfo._id,
       })
         .then(({ data }) => {
+          dispatch(clearCart()); // xóa giỏ hàng sau khi tạo đơn hàng thành công
           window.location.href = data.data.payUrl;
-
         })
         .catch((error) => console.log(error));
     } else {
@@ -90,13 +92,12 @@ const Payment = () => {
         email: formData.email,
         items,
         total_amount,
-        final_amount: total_amount, // thêm final_amount
         payment_method: paymentMethod.toUpperCase(),
         shipping_address: formData.address,
       })
         .then(({ data }) => {
-          console.log(data);
-          navigate("/order/history")
+          dispatch(clearCart());
+          navigate(`/History/${user._id}`)
         })
         .catch((error) => console.log(error));
     }

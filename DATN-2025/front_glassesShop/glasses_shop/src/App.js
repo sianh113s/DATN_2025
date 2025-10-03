@@ -5,6 +5,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { Provider } from "react-redux";
 import { store, persistor } from "./redux_setup/store";
 import { PersistGate } from "redux-persist/integration/react";
@@ -48,6 +49,7 @@ const LayoutWrapper = ({ children }) => {
       {children}
       <Service />
       <Footer />
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };

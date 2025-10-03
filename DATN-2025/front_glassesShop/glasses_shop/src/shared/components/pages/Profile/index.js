@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { profileUser } from "../../../services/Api";
-import { useParams } from "react-router-dom";
+import { profileUser, updateUser } from "../../../services/Api";
+import { data, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Profile = () => {
   const { id } = useParams(); // Lấy id từ URL
@@ -41,8 +42,16 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Thông tin cập nhật:", user);
-    // TODO: Gọi API update profile ở đây
+    updateUser(user._id, user)
+      .then(({ data }) => {
+        toast.success(data.message);
+        profileUser(user._id)
+          .then(({ data }) => setUser(data.data))
+          .catch((error) => console.log(error))
+      })
+      .catch((error) => console.log(error)
+      );
+
   };
 
   if (loading) {

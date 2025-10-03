@@ -20,7 +20,11 @@ const Login = () => {
         localStorage.setItem("userData", JSON.stringify(data.userData));
 
         // 🚀 reload lại trang để Header lấy user mới từ localStorage
-        navigate("/");
+        if (data.userData.role == "admin") {
+          navigate("/admin/DashBoard");
+        } else {
+          navigate("/");
+        }
         window.location.reload();
       }
     } catch (err) {
@@ -29,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#e5e5e5", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#fff", minHeight: "100vh" }}>
       <div
         className="login-container bg-white p-4 mt-5 rounded shadow"
         style={{ maxWidth: "560px", margin: "0 auto" }}

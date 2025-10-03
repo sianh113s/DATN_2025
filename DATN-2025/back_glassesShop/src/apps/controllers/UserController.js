@@ -65,7 +65,7 @@ exports.update = async (req, res) => {
       address: body.address,
     }
     await UserModel.updateOne({ _id: id }, { $set: user });
-    return res.status(200).json({ message: "Update Success" });
+    return res.status(200).json({ message: "Cập nhật thành công", data: user });
   } catch (error) {
     return res.status(500).json({ message: "Server Error" })
   }

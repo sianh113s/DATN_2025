@@ -1,6 +1,7 @@
 import { Container, Row, Col, Nav, Tab, Modal, Table, Button, Form } from "react-bootstrap";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   getUser,
   deleteUser,
@@ -15,6 +16,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../../../../services/Api";
+
 
 // ---------------- Category Modal ----------------
 const CategoryModal = ({ show, onHide, onSave }) => {
@@ -396,6 +398,7 @@ const ProductEditModal = ({ show, onHide, onSave, product, categories }) => {
 
 
 
+
 // ---------------- Dashboard ----------------
 const DashBoard = () => {
   const [activeKey, setActiveKey] = useState("dashboard");
@@ -411,6 +414,8 @@ const DashBoard = () => {
   const [showProductModal, setShowProductModal] = useState(false);
   const [showEditProductModal, setShowEditProductModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [user, setUser] = useState();
+  const navigate = useNavigate();
 
   const weeklyRevenue = [
     { week: "Tuần 1", revenue: 1200000 },
@@ -426,7 +431,11 @@ const DashBoard = () => {
     fetchProducts();
   }, []);
   const fetchProducts = () => {
-    getProducts({ limit: 20 })
+    getProducts({
+      params: {
+        limit: 30,
+      },
+    })
       .then(({ data }) => setProducts(data.data.docs))
       .catch((error) => console.log(error));
   }
@@ -583,6 +592,13 @@ const DashBoard = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    setUser(null);
+    navigate("/login");
+  };
+
   return (
     <Container fluid>
       <Row>
@@ -621,7 +637,7 @@ const DashBoard = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="logout" className="text-white">
+              <Nav.Link onClick={handleLogout} eventKey="logout" className="text-white">
                 Đăng xuất
               </Nav.Link>
             </Nav.Item>

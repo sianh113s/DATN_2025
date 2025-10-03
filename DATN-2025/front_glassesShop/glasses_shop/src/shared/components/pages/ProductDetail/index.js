@@ -12,14 +12,12 @@ const ProductDetail = () => {
   const [productDetail, setProductDetail] = useState({});
   const [productReviews, setProductReviews] = useState([]);
   const [inputComment, setInputComment] = useState({});
-  const [users, setUsers] = useState({}); // dùng object thay vì array
+  const [user, setUser] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const changeInputComment = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
-
     return setInputComment({ ...inputComment, [name]: value })
   }
   // Lấy sản phẩm và reviews
@@ -31,28 +29,13 @@ const ProductDetail = () => {
     getProduct(id, { params: { limit: 8 } })
       .then(({ data }) => setProductDetail(data.data))
       .catch((error) => console.log(error));
+    const storedUser = localStorage.getItem("userData");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
   }, [id]);
 
-  // Lấy thông tin user từ user_id trong reviews
 
-  useEffect(() => {
-    productReviews.forEach((review) => {
-      const userId = review.user_id;
-      if (userId && !users[userId]) {
-        getUser(userId) // thực ra trả về toàn bộ users
-          .then(({ data }) => {
-            console.log("User list:", data);
-            // data.data là mảng users
-            const foundUser = data.data.find(u => u._id === userId);
-            setUsers(prev => ({
-              ...prev,
-              [userId]: foundUser ? foundUser.name : "Anonymous"
-            }));
-          })
-          .catch((error) => console.log("Lỗi lấy user:", error));
-      }
-    });
-  }, [productReviews]);
 
   // Tăng giảm số lượng
   const increaseQty = () => setQuantity((prev) => prev + 1);
@@ -72,9 +55,19 @@ const ProductDetail = () => {
     }
   };
   const clickComment = () => {
-    createReview(id, inputComment)
+    if (!user?._id) {
+      alert("Bạn cần đăng nhập để bình luận");
+      return;
+    }
+    const payload = {
+      ...inputComment,
+      user_id: user._id
+    };
+    createReview(id, payload)
       .then(({ data }) => {
-        console.log(data);
+        getProductReviews(id, { params: { limit: 3 } })
+          .then(({ data }) => setProductReviews(data.data.docs))
+          .catch((error) => console.log(error));
 
       })
       .catch((error) => console.log(error));
@@ -121,8 +114,8 @@ const ProductDetail = () => {
 
             {/* Right - Product Info */}
             <div className="flex-fill p-3 d-flex flex-column justify-content-between">
-              <div>
-                <h4>{productDetail?.name}</h4>
+              <div className="p-3">
+                <h3>{productDetail?.name}</h3>
                 <h3 className="fw-bold">
                   {productDetail.price_vnd?.toLocaleString() ?? "0"}₫
                 </h3>
@@ -150,7 +143,7 @@ const ProductDetail = () => {
                   >
                     +
                   </button>
-                  <button onClick={clickAddToCart} className="btn btn-outline-dark ms-3">
+                  <button onClick={clickAddToCart} className="btn btn-outline-dark ms-3 p-3">
                     Thêm vào giỏ hàng
                   </button>
                 </div>
@@ -181,16 +174,16 @@ const ProductDetail = () => {
           className="border rounded p-4"
           style={{ borderColor: "#ddd", backgroundColor: "#f9f9f9" }}
         >
-          <h5 className="mb-3">Reviews</h5>
+          <h4 className="m-3">Đánh giá sản phẩm</h4>
 
           {/* Review items */}
           {productReviews?.map((review, index) => {
             let m = moment(review.createdAt)
             return (
-              <div key={index} className="card mb-3">
+              <div key={index} className="card m-3 border border-secondary-subtle">
                 <div className="card-body">
                   <h6 className="fw-bold mb-1">
-                    {users[review.user_id] || "Anonymous"}
+                    {review.name}
                   </h6>
                   <small className="text-muted">{m.fromNow()}</small>
                   <p className="mt-2">{review.comment}</p>
@@ -201,14 +194,13 @@ const ProductDetail = () => {
 
           {/* Add new review */}
           <div className="card p-3 mt-4">
-            <h6 className="fw-bold mb-2">Add your review</h6>
             <textarea
               name="comment"
               onChange={changeInputComment}
               value={inputComment.comment || ""}
               className="form-control mb-2"
               rows="3"
-              placeholder="Write your review..."
+              placeholder="Viết đánh giá..."
             ></textarea>
             <button onClick={clickComment} className="btn btn-dark mt-2">Submit</button>
           </div>

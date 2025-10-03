@@ -17,10 +17,14 @@
   var initScrollNav = function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 200) {
-      $('.navbar.fixed-top').addClass("bg-black");
+    if (window.location.pathname === "/" || window.location.pathname.startsWith("/Category") || window.location.pathname.startsWith("/Search")) {
+      if (scroll >= 200) {
+        $('.navbar.fixed-top').addClass("bg-black");
+      } else {
+        $('.navbar.fixed-top').removeClass("bg-black");
+      }
     } else {
-      $('.navbar.fixed-top').removeClass("bg-black");
+      $('.navbar.fixed-top').addClass("bg-black");
     }
   }
 
